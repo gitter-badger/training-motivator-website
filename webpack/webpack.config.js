@@ -8,7 +8,7 @@ module.exports = {
   },
 
   output: {
-    path:       __dirname + '/build/',
+    path:       __dirname + '/../build/',
     filename:   'app.js',
     publicPath: 'http://localhost:9090/build/'
   },

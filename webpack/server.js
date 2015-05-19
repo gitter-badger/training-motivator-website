@@ -1,5 +1,6 @@
 var express = require('express');
-var app = express();
+var app     = express();
+var path    = require('path');
 
 app.get('/app.js', function (req, res) {
   if (process.env.PRODUCTION) {
@@ -10,7 +11,7 @@ app.get('/app.js', function (req, res) {
 });
 
 app.get('*', function (req, res) {
-  res.sendFile(__dirname + '/build/index.html');
+  res.sendFile(path.resolve(__dirname + '/../build/index.html'));
 });
 
 if (!process.env.PRODUCTION) {

@@ -5,10 +5,9 @@
   "main": "src/main.jsx",
   "scripts": {
     "postinstall": "npm run build",
-    "start": "nodemon server.js",
-    "build": "webpack -p --config webpack.production.config.js",
+    "start": "nodemon webpack/server.js",
+    "build": "webpack -p --config webpack/webpack.production.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start test/karma.config.js",
-    "test-cross-browser": "./node_modules/karma/bin/karma start test/karma.cross-browser.config.js",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm build/app.js"
   },
