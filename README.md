@@ -41,3 +41,17 @@ To remove generated `build/app.js` run:
 Website is available under:
 
 http://squixy.zz.mu/react-dci
+
+# Deployment
+
+Firsly, make sure that you have following variables in your environment:
+
+- `FTP_HOST`
+- `FTP_USER`
+- `FTP_PASSWORD`
+
+Then you can run:
+
+    npm run deploy
+
+And visit your website.
