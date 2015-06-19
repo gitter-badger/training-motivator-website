@@ -1,5 +1,7 @@
 # training-motivator-website
 
+[![Join the chat at https://gitter.im/KamilLelonek/training-motivator-website](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/KamilLelonek/training-motivator-website?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A website for Training Motivator during [BattleHack Berlin 2015](https://2015.battlehack.org/berlin).
 
 ## Prerequisites
