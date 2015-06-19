@@ -1,3 +1,5 @@
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+
 export default class extends React.Component {
   constructor() {
     super();
@@ -10,9 +12,14 @@ export default class extends React.Component {
 
   render() {
     return (
-      <section>
-        <span className='current-year'>&copy; {this.currentYear()}</span>
-      </section>
+      <Navbar fixedBottom>
+        <Nav>
+          <NavItem className='current-year' href='https://2015.battlehack.org/berlin'>&copy; BattleHack Berlin {this.currentYear()}</NavItem>
+        </Nav>
+        <Nav right>
+          <NavItem href={this.API_URL}>API</NavItem>
+        </Nav>
+      </Navbar>
     )
   }
 }

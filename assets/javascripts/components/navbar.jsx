@@ -1,7 +1,13 @@
+import { Navbar, Nav } from 'react-bootstrap'
+import { NavItemLink } from 'react-router-bootstrap'
+
 export default class extends React.Component {
   render() {
     return (
-      <div />
+      <Navbar brand='Training Motivator' inverse fixedTop>
+        <Nav right>
+        </Nav>
+      </Navbar>
     )
   }
 }
