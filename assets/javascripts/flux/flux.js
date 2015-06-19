@@ -1,7 +1,3 @@
-import { Flummox } from 'flummox'
+import Alt from 'alt'
 
-export default class extends Flummox {
-  constructor() {
-    super();
-  }
-}
+export default new Alt()

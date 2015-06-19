@@ -1,6 +1,6 @@
-# react-dci
+# training-motivator-website
 
-Frontend application for [scala-dci](https://github.com/KamilLelonek/scala-dci) API.
+A website for Training Motivator during [BattleHack Berlin 2015](https://2015.battlehack.org/berlin).
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ Makre sure you have [NodeJS](https://nodejs.org/download/) installed.
 
 To install all of required dependecies run:
 
-    ./scripts/setup.sh
+    npm install
 
 ## Run
 
@@ -36,22 +36,36 @@ To remove generated `build/app.js` run:
 
     npm run clean
 
+## Test
+
+To test the application execute:
+
+  	npm run test
+
 # Demo
 
 Website is available under:
 
-http://squixy.zz.mu/react-dci
+[http://training-motivator.divshot.io/](http://training-motivator.divshot.io/)
 
 # Deployment
 
-Firsly, make sure that you have following variables in your environment:
+1. Firsly, make sure that you have [Divshot](https://divshot.com/) account created.
 
-- `FTP_HOST`
-- `FTP_USER`
-- `FTP_PASSWORD`
+2. Next, configure application to work with *Divshot*.
 
-Then you can run:
+		./scripts/configure-divshot.sh
+		
+	Which will authorize your account and connect the website with *Divshot* application.
+	
+3. Push the website:
 
-    npm run deploy
+	**Development**
 
-And visit your website.
+		./scripts/deploy-development.sh
+
+	**Production**
+
+		npm run deploy
+
+4. And visit [training-motivator website](https://divshot.com/).

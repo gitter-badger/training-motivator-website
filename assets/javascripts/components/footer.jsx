@@ -11,9 +11,7 @@ export default class extends React.Component {
   render() {
     return (
       <section>
-        <a className='current-year' href='http://kamil.lelonek.me/'>&copy; {this.currentYear()} Kamil Lelonek</a>
-        <br />
-        <a href={this.API_URL}>API</a>
+        <span className='current-year'>&copy; {this.currentYear()}</span>
       </section>
     )
   }

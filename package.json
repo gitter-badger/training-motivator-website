@@ -1,36 +1,34 @@
 {
-  "name": "react-dci",
+  "name": "training-motivator-website",
   "version": "0.0.1",
-  "description": "ReactJS frontend client for https://github.com/KamilLelonek/scala-dci.",
-  "main": "src/main.jsx",
+  "description": "A website for Training Motivator during BattleHack Berlin 2015",
+  "main": "assets/javascripts/main.jsx",
   "scripts": {
-    "postinstall": "npm run build",
-    "start": "nodemon webpack/server.js",
-    "build": "webpack -p --config webpack/webpack.production.config.js",
+    "start": "./node_modules/.bin/nodemon webpack/server.js",
+    "build": "./node_modules/.bin/webpack -p --config webpack/webpack.production.config.js",
     "test": "PHANTOMJS_BIN=./node_modules/.bin/phantomjs ./node_modules/karma/bin/karma start test/karma.config.js",
-    "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm build/app.js",
-    "deploy": "node ./scripts/deploy.js"
+    "deploy": "./scripts/deploy-production.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KamilLelonek/react-dci.git"
+    "url": "https://github.com/KamilLelonek/training-motivator-website"
   },
   "keywords": [
-    "react",
-    "flux",
-    "scala",
-    "dci"
+    "training",
+    "motivator",
+    "battlehack",
+    "training-motivator"
   ],
-  "author": "Kamil Lelonek",
+  "author": [
+    "Kamil Lelonek",
+    "Wojciech Langiewicz",
+    "Marcin Goluch",
+    "Jakub Przychodzeń"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/KamilLelonek/react-dci/issues"
-  },
-  "homepage": "https://github.com/KamilLelonek/react-dci/",
+  "homepage": "",
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "gulp-util": "^3.0.4",
     "istanbul": "^0.3.7",
     "istanbul-instrumenter-loader": "^0.1.2",
     "karma": "^0.12.31",
@@ -43,30 +41,26 @@
     "nodemon": "^1.3.7",
     "phantomjs": "^1.9.16",
     "react-hot-loader": "^1.2.3",
-    "vinyl-fs": "^1.0.0",
-    "vinyl-ftp": "^0.4.1",
-    "webpack-dev-server": "^1.7.0"
-  },
-  "dependencies": {
+    "webpack": "^1.9.6",
     "babel-core": "^5.4.3",
     "babel-loader": "^5.1.2",
     "css-loader": "^0.12.1",
     "express": "^4.12.3",
     "file-loader": "^0.8.1",
-    "flummox": "^4.0.0-alpha2",
     "imports-loader": "^0.6.3",
-    "jquery": "^2.1.4",
-    "material-ui": "^0.7.5",
-    "material-ui-sass": "^0.7.2",
     "node-sass": "^3.1.1",
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
     "react-tap-event-plugin": "^0.1.6",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.2",
-    "sugar": "^1.4.1",
     "url-loader": "^0.5.5",
-    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "alt": "^0.16.10",
+    "jquery": "^2.1.4",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "sugar": "^1.4.1",
     "whatwg-fetch": "^0.8.1"
   }
 }
